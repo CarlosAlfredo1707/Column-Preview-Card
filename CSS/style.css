@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+    --very-light-gray : hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+    --font1 : 'Big Shoulders Display', cursive;
+    --font2 : 'Lexend Deca', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows:repeat(3, 1fr);
+    grid-template-areas: 
+    "sedans"
+    "suvs"
+    "luxury";
+    font-family: var(--font1);
+}
+
+.sedans {
+    margin: 20px auto 0;
+    border-radius: 10px 10px 0 0;
+    width: 320px;
+    height: 420px;
+    background-color: var(--bright-orange);
+    grid-area: sedans;
+}
+.sedans__img {
+    width: 120px;
+    padding: 40px 30px 30px;
+}
+.sedans__title {
+    padding: 0 30px 30px;
+    text-transform: uppercase;
+    color:#fff;
+    text-shadow: 0px 1px 0px #000;
+}
+.sedans__text {
+    padding: 0 50px 10px 30px;
+    color:var(--transparent-white);
+    font-family: var(--font2);
+    font-size: 15px;
+    line-height: 1.6;
+}
+.sedans__cta {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--transparent-white);
+    color:var(--bright-orange);
+    font-family: var(--font2);
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 20px 50px 10px 30px;
+}
+.sedans__cta:active {
+    background-color: var(--bright-orange);
+    box-shadow: 0px 0px 0px 2px #fff;
+    color:#fff;
+}
+.suvs {
+    margin: 0 auto;
+    width: 320px;
+    height: 440px;
+    background-color: var(--dark-cyan);
+    grid-area: suvs;
+}
+.suvs__img {
+    width: 120px;
+    padding: 40px 30px 30px;
+}
+.suvs__title {
+    padding: 0 30px 30px;
+    text-transform: uppercase;
+    color:#fff;
+    text-shadow: 0px 1px 0px #000;
+}
+.suvs__text {
+    padding: 0 80px 10px 30px;
+    color:var(--transparent-white);
+    font-family: var(--font2);
+    font-size: 15px;
+    line-height: 1.6;
+}
+.suvs__cta {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--transparent-white);
+    color:var(--dark-cyan);
+    font-family: var(--font2);
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 20px 50px 10px 30px;
+}
+.suvs__cta:active {
+    background-color: var(--very-dark-cyandark-cyan);
+    box-shadow: 0px 0px 0px 2px #fff;
+    color:#fff;
+}
+
+.luxury {
+    margin: 0 auto;
+    width: 320px;
+    height: 420px;
+    background-color: var(--very-dark-cyan);
+    grid-area: luxury;
+    border-radius: 0 0 10px 10px;
+}
+.luxury__img {
+    width: 120px;
+    padding: 40px 30px 30px;
+}
+.luxury__title {
+    padding: 0 30px 30px;
+    text-transform: uppercase;
+    color:#fff;
+    text-shadow: 0px 1px 0px #000;
+}
+.luxury__text {
+    padding: 0 60px 10px 30px;
+    color:var(--transparent-white);
+    font-family: var(--font2);
+    font-size: 15px;
+    line-height: 1.6;
+}
+.luxury__cta {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--transparent-white);
+    color:var(--very-dark-cyan);
+    font-family: var(--font2);
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 20px 50px 10px 30px;
+}
+.luxury__cta:active {
+    background-color: var(--dark-cyan);
+    box-shadow: 0px 0px 0px 2px #fff;
+    color:#fff;
+}
+
+@media (min-width:1024px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+    .container {
+        display: flex;
+        width: fit-content;
+        margin-top: 25vh;
+    }
+    .sedans {
+        margin: 0;
+        border-radius: 10px 0 0 10px;
+        height: 470px;
+    }
+    .sedans__cta {
+        margin-top: 70px;
+    }
+    .sedans__cta:hover {
+        background-color: var(--bright-orange);
+    box-shadow: 0px 0px 0px 2px #fff;
+    color:#fff;
+    }
+    .suvs {
+        height: 470px;
+    }
+    .suvs__cta {
+        margin-top: 70px;
+    }
+    .suvs__cta:hover {
+        background-color: var(--dark-cyan);
+    box-shadow: 0px 0px 0px 2px #fff;
+    color:#fff;
+    }
+    .luxury {
+        border-radius: 0 10px 10px 0;
+        height: 470px;;
+    }
+    .luxury__cta {
+        margin-top: 70px;
+    }
+    .luxury__cta:hover {
+        background-color: var(--very-dark-cyan);
+    box-shadow: 0px 0px 0px 2px #fff;
+    color:#fff;
+    }
+}
+
+
